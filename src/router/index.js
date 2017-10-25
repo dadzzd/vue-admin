@@ -18,6 +18,8 @@ const generateRoutes = (menus) => {
 }
 
 export default new Router({
+  mode: 'history',
+  linkActiveClass: 'is-active',
   routes: [
     ...generateRoutes(menusModule.state.items)
   ]
