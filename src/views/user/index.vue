@@ -7,7 +7,7 @@
         </div>
         <vuetable
         api-url="https://vuetable.ratiw.net/api/users"
-        :fields="['name', 'email', 'birthdate', 'salary']"
+        :fields=fields
         ref="vuetable"
         pagination-path=""
         @vuetable:pagination-data="onPaginationData"></vuetable>
@@ -25,6 +25,32 @@
 
   export default {
     name: 'UserIndex',
+    data () {
+      return {
+        fields: [
+          {
+            name: 'name',
+            title: 'name',
+            sortField: 'name'
+          },
+          {
+            name: 'email',
+            title: 'email',
+            sortField: 'email'
+          },
+          {
+            name: 'birthdate',
+            title: 'birthdate',
+            sortField: 'birthdate'
+          },
+          {
+            name: 'salary',
+            title: 'salary',
+            sortField: 'salary'
+          }
+        ]
+      }
+    },
     methods: {
       onChangePage (page) {
         this.$refs.vuetable.changePage(page)
