@@ -6,5 +6,15 @@ export default {
   meta: {
     label: 'Test'
   },
-  component: lazyLoading('test')
+  component: lazyLoading('test'),
+  children: [
+    {
+      name: 'ChildTest',
+      path: 'childtest',
+      component: lazyLoading('test/ChildTest'),
+      meta: {
+        label: 'label-child-test'
+      }
+    }
+  ]
 }

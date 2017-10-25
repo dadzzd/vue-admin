@@ -10,6 +10,9 @@ const generateRoutes = (menus) => {
     if (menu.path) {
       routes.push(menu)
     }
+    if (menu.children) {
+      generateRoutes(menu.children)
+    }
   })
   return routes
 }
