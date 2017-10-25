@@ -8,11 +8,13 @@ import store from './store'
 import Buefy from 'buefy'
 import 'buefy/lib/buefy.css'
 import VueNProgress from 'vue-nprogress'
+import VueEvents from 'vue-events'
 
 Vue.config.productionTip = false
 
 Vue.use(Buefy)
 Vue.use(VueNProgress)
+Vue.use(VueEvents)
 
 const nprogress = new VueNProgress({ parent: '.nprogress-container' })
 
