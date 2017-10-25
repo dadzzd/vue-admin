@@ -1,6 +1,6 @@
 <template>
   <div>
-    Test
+    <router-view></router-view>
   </div>
 </template>
 
