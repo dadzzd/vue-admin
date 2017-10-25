@@ -1,6 +1,6 @@
 <template>
   <nav v-if="tablePagination && tablePagination.last_page > 1"
-  :class="pagination">
+    class="pagination">
     <a
       @click="loadPage('prev')"
       :class="['pagination-previous', isOnFirstPage ? 'is-disabled' : '']">
