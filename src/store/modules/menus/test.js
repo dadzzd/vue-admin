@@ -13,7 +13,23 @@ export default {
       path: 'childtest',
       component: lazyLoading('test/ChildTest'),
       meta: {
-        label: 'label-child-test'
+        label: 'ChildTest'
+      }
+    },
+    {
+      name: 'FrontTest',
+      path: 'fronttest',
+      component: lazyLoading('test/FrontTest'),
+      meta: {
+        label: 'FrontTest'
+      }
+    },
+    {
+      name: 'TileSystem',
+      path: 'tile',
+      component: lazyLoading('test/TileSystem'),
+      meta: {
+        label: 'TileSystem'
       }
     }
   ]
