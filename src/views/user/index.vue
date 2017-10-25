@@ -5,9 +5,11 @@
         <div class="title">
           user list
         </div>
+        <filter-bar></filter-bar>
         <vuetable
         api-url="https://vuetable.ratiw.net/api/users"
         :fields=fields
+        :append-params="appendParams"
         ref="vuetable"
         pagination-path=""
         @vuetable:pagination-data="onPaginationData"></vuetable>
@@ -22,6 +24,7 @@
 <script>
   import Vuetable from 'vuetable-2/src/components/Vuetable.vue'
   import UserPagination from './components/UserPagination.vue'
+  import FilterBar from './components/FilterBar.vue'
 
   export default {
     name: 'UserIndex',
@@ -48,7 +51,8 @@
             title: 'salary',
             sortField: 'salary'
           }
-        ]
+        ],
+        appendParams: {}
       }
     },
     methods: {
@@ -60,6 +64,7 @@
       }
     },
     components: {
+      FilterBar,
       Vuetable,
       UserPagination
     }
