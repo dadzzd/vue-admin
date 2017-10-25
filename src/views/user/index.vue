@@ -5,14 +5,21 @@
         <div class="title">
           user list
         </div>
+        <vuetable
+        apiUrl="https://vuetable.ratiw.net/api/users"
+        :fields="['name', 'email', 'birthdate', 'salary']"></vuetable>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+  import Vuetable from 'vuetable-2/src/components/Vuetable.vue'
   export default {
-    name: 'UserIndex'
+    name: 'UserIndex',
+    components: {
+      Vuetable
+    }
   }
 </script>
 
