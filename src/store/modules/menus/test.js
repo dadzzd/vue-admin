@@ -18,7 +18,7 @@ export default {
     },
     {
       name: 'FrontTest',
-      path: 'fronttest',
+      path: '',
       component: lazyLoading('test/FrontTest'),
       meta: {
         label: 'FrontTest'
